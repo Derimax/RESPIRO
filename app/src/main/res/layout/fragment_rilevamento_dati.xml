@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".rilevamento.RilevamentoDatiFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/standard_bottom_sheet"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rettangolo_toproundcorner"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center|top"/>
+
+
+                <LinearLayout android:id="@+id/primaRiga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <LinearLayout android:id="@+id/boxDistanza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView android:id="@+id/kmLive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:fontFamily="@font/latoblack"
+                                android:textSize="12pt"
+                                android:textColor="@color/nero_testo"/>
+
+                            <TextView android:id="@+id/m"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="m"
+                                android:fontFamily="@font/latoblack"
+                                android:textSize="11pt"
+                                android:textColor="@color/nero_testo"
+                                android:layout_toRightOf="@+id/kmLive"
+                                android:layout_alignBottom="@+id/kmLive"/>
+
+
+
+
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="distanza"
+                            android:textSize="7pt"
+                            android:fontFamily="@font/latoregular"
+                            android:layout_marginTop="0dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/boxTempo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="20dp">
+
+                        <Chronometer android:id="@+id/tempoLive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/latoblack"
+                            android:textSize="12pt"
+                            android:textColor="@color/nero_testo"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="durata"
+                            android:textSize="7pt"
+                            android:fontFamily="@font/latoregular"
+                            android:layout_marginTop="0dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/secondaRiga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="40dp">
+
+                    <LinearLayout android:id="@+id/boxPm25Live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="20dp">
+
+                        <TextView android:id="@+id/pmLive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:fontFamily="@font/latoblack"
+                            android:textSize="12pt"
+                            android:textColor="@color/nero_testo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PM 2.5"
+                            android:textSize="7pt"
+                            android:fontFamily="@font/latoregular"
+                            android:layout_marginTop="0dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/boxPm10Live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="20dp">
+
+                        <TextView android:id="@+id/pm10Live"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:fontFamily="@font/latoblack"
+                            android:textSize="12pt"
+                            android:textColor="@color/nero_testo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PM 10 (µg/m3)"
+                            android:textSize="7pt"
+                            android:fontFamily="@font/latoregular"
+                            android:layout_marginTop="0dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</FrameLayout>

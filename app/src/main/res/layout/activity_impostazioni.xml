@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".impostazioni.ImpostazioniActivity">
+
+    <ImageButton android:id="@+id/back"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:padding="10sp"
+        android:layout_margin="10sp"
+        android:src="@drawable/ic_freccia_indietro"
+        android:background="@drawable/trasparent"
+        android:onClick="back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="10dp"
+            android:onClick="logout">
+
+            <ImageView android:id="@+id/logoutIcon"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_impostazioni_exit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#EF6060"
+                android:fontFamily="@font/latoregular"
+                android:textSize="8pt"
+                android:layout_toRightOf="@+id/logoutIcon"
+                android:layout_centerVertical="true"/>
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

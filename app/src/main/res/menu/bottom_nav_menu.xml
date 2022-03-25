@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/datiMenu"
+        android:title="Dati"
+        android:icon="@drawable/ic_dati" />
+
+    <item android:id="@+id/profiloMenu"
+        android:title="Profilo"
+        android:icon="@drawable/ic_profilo_menu"/>
+
+    <item android:id="@+id/placeholder"
+        android:title="" />
+
+    <item android:id="@+id/eventiMenu"
+        android:title="Eventi"
+        android:icon="@drawable/ic_eventi_menu" />
+
+    <item android:id="@+id/infoMenu"
+        android:title="Contatti"
+        android:icon="@drawable/ic_info_menu" />
+</menu>

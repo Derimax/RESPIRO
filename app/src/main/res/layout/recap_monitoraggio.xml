@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/rettangolo_turchese"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView android:id="@+id/dataView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/12/12"
+                android:fontFamily="@font/latobold"
+                android:textColor="#4B5C8D"
+                android:textSize="7pt"
+                android:layout_marginLeft="7dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView android:id="@+id/tempoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold"
+                android:textColor="#4B5C8D"
+                android:textSize="7pt"
+                android:text="00:00:00" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_uomo_che_corre"
+                android:layout_marginLeft="10dp" />
+
+            <TextView android:id="@+id/distanzaPercorsaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="256"
+                android:fontFamily="@font/latobold"
+                android:textColor="#4B5C8D"
+                android:textSize="7pt"/>
+
+            <TextView android:id="@+id/unitDiMisura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="km"
+                android:fontFamily="@font/latobold"
+                android:textColor="#4B5C8D"
+                android:textSize="7pt"/>
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rettangolo_angoli_arrotondati"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView android:id="@+id/punti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:fontFamily="@font/latobold"
+                        android:textColor="@color/white"
+                        android:textSize="10pt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pt"
+                        android:textSize="5pt"
+                        android:fontFamily="@font/latobold"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>

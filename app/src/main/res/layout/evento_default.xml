@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="230dp"
+    android:layout_height="250dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="10dp">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/grigio"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Non ci sono eventi\nnella tua città."
+            android:fontFamily="@font/latoregular"
+            android:textSize="7pt"
+            android:gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

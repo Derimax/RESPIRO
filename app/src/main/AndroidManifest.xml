@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.RESPIRO">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="NEWEST AVAILABLE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.example.RESPIRO.autenticazione.RespiroSubclass"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_respiro_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_respiro_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RESPIRO">
+        <activity android:name="com.example.RESPIRO.HomeDati.Mappa"></activity>
+        <activity
+            android:name="com.example.RESPIRO.autenticazione.FirstActivity"
+            android:exported="true"
+            android:label="RESPIRO"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.RESPIRO.rilevamento.RecapRilevamento"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.impostazioni.ImpostazioniActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.rilevamento.CheckRilevamento"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.autenticazione.LoginActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.autenticazione.RegisterUser"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.onboarding.Onboarding"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.info.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.eventi.EventiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.HomeDati.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.profilo.ProfiloActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.RESPIRO.rilevamento.RilevamentoActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+    </application>
+
+</manifest>

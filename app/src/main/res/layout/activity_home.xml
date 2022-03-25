@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeDati.HomeActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:paddingBottom="100dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <ImageView android:id="@+id/icona_impostazioni"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_impostazioni"
+                 android:layout_alignParentRight="true"
+                 android:onClick="vaiImpostazioni"
+                 android:layout_margin="35dp"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:paddingRight="40dp"
+                 android:paddingLeft="40dp"
+                 android:paddingTop="100dp"
+                 android:orientation="vertical">
+
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="100dp"
+                         app:cardCornerRadius="22dp"
+                         app:cardElevation="0dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="100dp"
+                             android:layout_alignParentLeft="true"
+                             android:src="@drawable/ic_nel_bosco"
+                             android:background="@color/grigio_chiaro"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="è sempre un piacere \n vederti!"
+                         android:fontFamily="@font/latolight"
+                         android:textColor="@color/nero_testo"
+                         android:textSize="8pt"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:layout_marginRight="15dp"
+                         android:elevation="2dp"/>
+
+                 </RelativeLayout>
+
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Qualità dell'aria a"
+                     android:padding="5dp"
+                     android:layout_marginTop="25dp"
+                     android:fontFamily="@font/latoregular"/>
+
+                 <RelativeLayout android:id="@+id/box_pos"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TextView android:id="@+id/pos"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:padding="5dp"
+                         android:text="San Paolo Bel Sito"
+                         android:fontFamily="@font/latobold"
+                         android:textColor="@color/nero_testo"
+                         android:textSize="15pt"/>
+
+>
+
+                 </RelativeLayout>
+
+
+             </LinearLayout>
+
+         </RelativeLayout>
+
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingRight="40dp"
+             android:paddingLeft="40dp"
+             android:paddingTop="40dp">
+
+
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="20dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginTop="20dp"
+             android:orientation="horizontal"
+             android:gravity="center|center_vertical">
+
+             <RelativeLayout android:id="@+id/boxMediaPm10"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:background="@drawable/rettangolo_bianco">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:gravity="center"
+                     android:layout_marginTop="15dp">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="PM10"
+                         android:fontFamily="@font/latobold"
+                         android:textSize="8pt"
+                         android:textColor="@color/nero_testo"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginBottom="10dp"/>
+
+                     <pl.pawelkleczkowski.customgauge.CustomGauge
+                         android:id="@+id/progressPm10"
+                         android:layout_width="140dp"
+                         android:layout_height="140dp"
+                         android:layout_centerHorizontal="true"
+                         android:paddingBottom="20dp"
+                         android:paddingLeft="20dp"
+                         android:paddingRight="20dp"
+                         android:paddingTop="20dp"
+                         app:gaugePointStartColor="#71BD39"
+                         app:gaugePointEndColor="#71BD39"
+                         app:gaugeStartAngle="135"
+                         app:gaugeStrokeCap="ROUND"
+                         app:gaugeStrokeColor="@color/grigio_chiaro"
+                         app:gaugeStrokeWidth="11dp"
+                         app:gaugeStartValue="0"
+                         app:gaugeEndValue="270"
+                         app:gaugeSweepAngle="270" />
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:layout_centerHorizontal="true"
+                     android:layout_marginTop="80dp"
+                     android:padding="20dp"
+                     android:orientation="vertical">
+
+
+
+                     <TextView android:id="@+id/mediapm10"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="50.3"
+                         android:fontFamily="@font/latobold"
+                         android:textColor="@color/nero_testo"
+                         android:textSize="16pt"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="µg/m3"
+                         android:textSize="7pt"
+                         android:fontFamily="@font/latobold"/>
+                 </LinearLayout>
+
+             </RelativeLayout>
+
+             <RelativeLayout android:id="@+id/boxMediaPm25"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:background="@drawable/rettangolo_bianco">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:gravity="center"
+                     android:layout_marginTop="15dp">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="PM2.5"
+                         android:fontFamily="@font/latobold"
+                         android:textSize="8pt"
+                         android:textColor="@color/nero_testo"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginBottom="10dp"/>
+
+                     <pl.pawelkleczkowski.customgauge.CustomGauge
+                         android:id="@+id/progressPm25"
+                         android:layout_width="140dp"
+                         android:layout_height="140dp"
+                         android:layout_centerHorizontal="true"
+                         android:paddingBottom="20dp"
+                         android:paddingLeft="20dp"
+                         android:paddingRight="20dp"
+                         android:paddingTop="20dp"
+                         app:gaugePointStartColor="#71BD39"
+                         app:gaugePointEndColor="#71BD39"
+                         app:gaugeStartAngle="135"
+                         app:gaugeStrokeCap="ROUND"
+                         app:gaugeStrokeColor="@color/grigio_chiaro"
+                         app:gaugeStrokeWidth="11dp"
+                         app:gaugeStartValue="0"
+                         app:gaugeEndValue="270"
+                         app:gaugeSweepAngle="270" />
+
+                 </LinearLayout>
+
+
+
+
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:layout_centerHorizontal="true"
+                     android:layout_marginTop="80dp"
+                     android:padding="20dp"
+                     android:orientation="vertical">
+
+
+
+                     <TextView android:id="@+id/mediapm25"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="50.3"
+                         android:fontFamily="@font/latobold"
+                         android:textColor="@color/nero_testo"
+                         android:textSize="16pt"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="µg/m3"
+                         android:textSize="7pt"
+                         android:fontFamily="@font/latobold"/>
+                 </LinearLayout>
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="40dp"
+             android:layout_marginRight="40dp"
+             android:orientation="horizontal">
+
+         </LinearLayout>
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="40dp"
+             android:layout_marginRight="40dp"
+             android:layout_marginTop="25dp"
+             android:background="@drawable/rettangolo">
+
+             <ImageView
+                 android:layout_width="80dp"
+                 android:layout_height="90dp"
+                 android:src="@drawable/ic_passeggiata_ok"
+                 android:elevation="20dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="20dp"/>
+
+
+
+
+
+
+             <TextView android:id="@+id/consiglio"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Ottimo per una \npasseggiata all'aperto!"
+                 android:fontFamily="@font/latolight"
+                 android:textColor="@color/nero_testo"
+                 android:textSize="7pt"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="20dp"
+                 android:elevation="2dp"/>
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="40dp"
+             android:layout_marginLeft="40dp"
+             android:layout_marginTop="20dp"
+             android:orientation="vertical"
+             android:gravity="center|center_vertical">
+
+             <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:cardCornerRadius="22dp"
+                 app:cardElevation="0dp">
+
+                 <org.osmdroid.views.MapView
+                     android:id="@+id/mapview"
+                     android:layout_width="match_parent"
+                     android:layout_height="250dp" />
+
+             </androidx.cardview.widget.CardView>
+
+             <Button android:id="@+id/vaiMappa"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:text="mappa completa"
+                 android:elevation="0dp"
+                 android:textColor="@color/white"
+                 android:background="@drawable/rettangolo_bordo_blu"
+                 style="?android:attr/borderlessButtonStyle"
+                 tools:targetApi="honeycomb"
+                 android:onClick="vaiMappa"/>
+
+         </LinearLayout>
+
+
+
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="20dp">
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fabCradleMargin="20dp"
+            app:fabCradleVerticalOffset="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            android:layout_gravity="bottom">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:menu="@menu/bottom_nav_menu"
+                android:layout_marginRight="16dp"
+                app:elevation="0dp"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:onClick="onFabClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#79B9FA"
+            android:src="@drawable/ic_add"
+            app:layout_anchor="@id/bottomAppBar" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
