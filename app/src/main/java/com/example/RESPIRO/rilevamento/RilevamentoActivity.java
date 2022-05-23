@@ -374,7 +374,7 @@ public class RilevamentoActivity extends AppCompatActivity implements Rilevament
 
             }
         });
-    };
+    }
     private void disconnettitiMQTT() {
         try {
             IMqttToken token = client.disconnect();
